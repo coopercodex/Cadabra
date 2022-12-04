@@ -1,18 +1,25 @@
 import './App.css';
 import { Header } from './Header';
-import { Route, Routes } from 'react-router-dom';
+import { Login } from './Login';
+import { Home } from './Home ';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      <Header />
-      <h1>Cadabra</h1>
+    <>
+      <div className="App">
+        {location.pathname === '/login' ? null : <Header />}
+        <h1>Cadabra</h1>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/checkout' />
+        </Routes>
+      </div>
       <Routes>
-        <Route path='/' />
-        <Route path='/checkout' />
-        <Route path='/login' />
+        <Route path='/login' element={<Login />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
