@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
+import ShoppingBasket from '@mui/icons-material/ShoppingBasket'
 
 export const Header = () => {
   return (
@@ -13,7 +14,30 @@ export const Header = () => {
         <SearchIcon className='search-icon' />
       </div>
       <div className='header-nav'>
-        <Link></Link>
+        <Link to='/login' className='header-link'>
+        <div className='header-option'>
+          <span className='header-optionLineOne'>Hello Derek</span>
+          <span  className='header-optionLineTwo'>Sign In</span>
+        </div>
+        </Link>
+        <Link to='/' className='header-link'>
+        <div className='header-option'>
+          <span className='header-optionLineOne'>Returns</span>
+          <span className='header-optionLineTwo'>& Orders</span>
+        </div>
+        </Link>
+        <Link to='/' className='header-link'>
+        <div className='header-option'>
+          <span className='header-optionLineOne'>Your</span>
+          <span className='header-optionLineTwo'>Prime</span>
+        </div>
+        </Link>
+        <Link to='/checkout' className='header-link'>
+          <div className='header-openBasket'> 
+            <ShoppingBasket /> 
+            <span className='header-optionLineTwo header-basketCount'>0</span>
+          </div>
+        </Link>
       </div>
     </nav>
   )

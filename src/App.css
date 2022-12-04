@@ -6,13 +6,27 @@
   display: flex;
   align-items: center;
   background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
+
+.header-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .header-logo {
   object-fit: contain;
   width: 100px;
   height: 48px;
   margin: 0 20px;
   margin-top: 15px;
+}
+
+.header-link {
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 .search-icon {
@@ -25,6 +39,31 @@
 .header-search {
   display: flex;
   flex: 0.5;
+}
+
+.header-option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.header-optionLineOne {
+  font-size: 10px;
+}
+
+.header-optionLineTwo {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header-openBasket {
+  display: flex;
+  align-items: center;
+}
+
+.header-basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .search-input {
