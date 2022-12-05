@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Product } from '../Product'
 import { ProductItems } from './ProductItems'
 export const Home = () => {
   const [product, setProduct] = useState([])
