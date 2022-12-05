@@ -2,12 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
 import ShoppingBasket from '@mui/icons-material/ShoppingBasket'
+import { useSelector } from 'react-redux'
+import { selectItems } from './slices/basketSlice'
 
 export const Header = () => {
+  const items = useSelector(selectItems);
+
   return (
     <nav className='header'>
       <Link to='/'>
-        <img className='header-logo' src='https://miro.medium.com/max/1400/1*Sauw_oUzzsUCVqtbAb3Hkw.jpeg' />
+        <img className='header-logo' src='https://miro.medium.com/max/1400/1*Sauw_oUzzsUCVqtbAb3Hkw.jpeg' alt='site logo' />
       </Link>
       <div className='header-search'>
         <input type="text" className="search-input" />
@@ -35,7 +39,7 @@ export const Header = () => {
         <Link to='/checkout' className='header-link'>
           <div className='header-openBasket'> 
             <ShoppingBasket /> 
-            <span className='header-optionLineTwo header-basketCount'>0</span>
+            <span className='header-optionLineTwo header-basketCount'>{items.length}</span>
           </div>
         </Link>
       </div>

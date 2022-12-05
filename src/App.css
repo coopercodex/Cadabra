@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -47,6 +48,7 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
 .header-optionLineOne {
   font-size: 10px;
 }
@@ -71,4 +73,114 @@
   padding: 10px;
   border: none;
   width: 100%;
+}
+
+.home {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-image {
+  width: 100%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: -1;
+  margin-bottom: -150px;
+}
+
+.home-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 100px;
+  /* max-width: 150px; */
+}
+/* .product-container {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 1;
+} */
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  max-height: 400px;
+  min-width: 100px;
+  margin: 10px;
+  margin-top: 40px;
+  padding: 20px;
+  width: 100%;
+  background-color: white;
+  /* z-index: 1; */
+}
+
+
+.product-info {
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.product img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  margin-top: 5px;
+}
+
+.product-rating {
+  display: flex;
+}
+
+.product button {
+  /* background-color: #f0c14b; */
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  padding: 4px;
+  width: 25%;
+  background: linear-gradient(to bottom, #f0c14b, 75%, transparent 100%);
+}
+.product button:hover {
+  background: #f0c14b;
+  cursor: pointer;
+}
+
+.product-prime {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-size: small;
+  font-weight: 500;
+  color: grey;
+}
+
+.product-prime img {
+  /* display: flex; */
+  /* height: 50px; */
+  max-height: 45px;
+  /* width: ; */
+  object-fit: contain;
+  padding: 0;
+  /* margin-bottom: 15px; */
+  /* border: 1px solid black; */
+}
+
+.checkout-ad {
+  width: 100%;
+  /* height: 350px; */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: -1;
+  margin-bottom: 10px;
+  /* object-fit: contain; */
 }

@@ -2,6 +2,7 @@ import './App.css';
 import { Header } from './Header';
 import { Login } from './Login';
 import { Home } from './Home ';
+import { Checkout } from './Checkout';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 function App() {
@@ -10,10 +11,9 @@ function App() {
     <>
       <div className="App">
         {location.pathname === '/login' ? null : <Header />}
-        <h1>Cadabra</h1>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/checkout' />
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
       </div>
       <Routes>
