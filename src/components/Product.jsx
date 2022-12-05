@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addToBasket } from './slices/basketSlice';
+import { addToBasket } from '../slices/basketSlice';
 
 
 export const Product = ({products}) => {

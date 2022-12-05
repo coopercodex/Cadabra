@@ -1,12 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { selectItems, selectTotal } from '../slices/basketSlice'
-import { CheckoutProduct } from '../app/CheckoutProduct'
+import { CheckoutProduct } from './CheckoutProduct'
 
 export const Checkout = () => {
   const items = useSelector(selectItems)
   const total = useSelector(selectTotal)
-  
+
   return (
     <div className='checkout'>
      <img className='checkout-ad'
