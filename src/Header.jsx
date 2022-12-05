@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
-import ShoppingBasket from '@mui/icons-material/ShoppingBasket'
+import {BsCart4 } from 'react-icons/bs';
 import { useSelector } from 'react-redux'
 import { selectItems } from './slices/basketSlice'
 
@@ -19,26 +19,26 @@ export const Header = () => {
       </div>
       <div className='header-nav'>
         <Link to='/login' className='header-link'>
-        <div className='header-option'>
-          <span className='header-optionLineOne'>Hello Derek</span>
-          <span  className='header-optionLineTwo'>Sign In</span>
-        </div>
+          <div className='header-option'>
+            <span className='header-optionLineOne'>Hello Derek</span>
+            <span className='header-optionLineTwo'>Sign In</span>
+          </div>
         </Link>
         <Link to='/' className='header-link'>
-        <div className='header-option'>
-          <span className='header-optionLineOne'>Returns</span>
-          <span className='header-optionLineTwo'>& Orders</span>
-        </div>
+          <div className='header-option'>
+            <span className='header-optionLineOne'>Returns</span>
+            <span className='header-optionLineTwo'>& Orders</span>
+          </div>
         </Link>
         <Link to='/' className='header-link'>
-        <div className='header-option'>
-          <span className='header-optionLineOne'>Your</span>
-          <span className='header-optionLineTwo'>Prime</span>
-        </div>
+          <div className='header-option'>
+            <span className='header-optionLineOne'>Your</span>
+            <span className='header-optionLineTwo'>Prime</span>
+          </div>
         </Link>
         <Link to='/checkout' className='header-link'>
-          <div className='header-openBasket'> 
-            <ShoppingBasket /> 
+          <div className='header-openBasket'>
+            <BsCart4 />
             <span className='header-optionLineTwo header-basketCount'>{items.length}</span>
           </div>
         </Link>
