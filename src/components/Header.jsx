@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
 import {BsCart4 } from 'react-icons/bs';
 import { useSelector } from 'react-redux'
-import { selectItems } from './slices/basketSlice'
+import { selectItems } from '../slices/basketSlice'
 
 export const Header = () => {
   const items = useSelector(selectItems);
