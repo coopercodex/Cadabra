@@ -1,8 +1,8 @@
 import './App.css';
-import { Header } from './Header';
-import { Login } from './Login';
-import { Home } from './Home ';
-import { Checkout } from './Checkout';
+import { Header } from './components/Header';
+import { Login } from './components/Login';
+import { Home } from './components/Home ';
+import { Checkout } from './components/Checkout';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 function App() {
